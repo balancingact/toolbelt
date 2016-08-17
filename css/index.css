@@ -18,6 +18,16 @@ ol#high-scores li {
   line-height: 50px;
 }
 
+.timer {
+  font-size: 200px;
+  color: #000;
+  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
 span {
   font-size: 100px;
   color: #000;

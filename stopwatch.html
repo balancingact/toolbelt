@@ -1,0 +1,66 @@
+---
+layout: default
+title: Color Picker
+favicon: stopwatch/stopwatch.png
+---
+<h1>Stopwatch
+  <br>
+  <small>Press space for start/stop</small>
+</h1>
+<br>
+<div>
+  <span><span class="timer" id="minute">000</span>:<span class="timer" id="second">00</span>.<span class="timer" id="millisecond">0</span></span>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <input type="submit" id="Run" class="btn btn-custom btn-lg" value="Run" style="padding:10px 0px 10px 0px;">
+  </div>
+  <div class="col-md-6">
+    <input type="submit" id="Reset" class="btn btn-custom btn-lg" value="Reset" style="padding:10px 0px 10px 0px;">
+  </div>
+</div>
+<br>
+<div>
+  <input type="submit" id="Save" class="btn btn-custom btn-lg" value="Save" style="padding:10px 0px 10px 0px;">
+</div>
+<br>
+<!--<h2>High Scores
+  <small>
+    <ol id="high-scores">
+    </ol>
+  </small>
+</h2>-->
+
+<script>
+  $(document).ready(function() {
+    $("#nav-stopwatch").addClass("active");
+
+    highScores();
+    $('body').keyup(function(e){
+      if(e.keyCode == 32){ // Space bar
+        if(!timer){
+          runWatch();
+        } else {
+          clearInterval(timer);
+          timer = false;
+        }
+      }
+    });
+    $("#Run").on('click', function(){
+      if(!timer){
+        runWatch();
+      } else {
+        clearInterval(timer);
+        timer = false;
+      }
+    });
+    $("#Reset").on('click', function(){
+      resetTimer();
+    });
+    //$("#Save").on('click', function(){
+    //  saveScore();
+    //});
+  });
+</script>
