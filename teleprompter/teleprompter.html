@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/reset.css">        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/prompter.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+        
+        <title>Teleprompter</title>
+    </head>
+    <body>
+        <nav id="navbar" class="navbar navbar-custom navbar-fixed-top" style="display:none;">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Teleprompter</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="font-size:20px">
+                    <li id="home"><a href="teleprompter.html">Start Page</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right nav-info">
+                    <li>Prompter Speed: <span id="speed"></span></li>
+                    <li>Font Size: <span id="fontsize"></span></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="holder">
+            <div class="center">
+                <p class="main">Drag and drop file into teleprompter</p>
+                <img class="folder" src="img/folder.ico" alt="Folder">
+            </div>
+        </div>
+        <div id="prompter" style="display: none"></div>
+		<div id="screen" style="display: none"></div>
+		<div id="howto" style="display: none">
+			<p class="usage">
+				Prompter will start in <span id="counter">5</span> seconds
+				<br>
+				<br>
+				Usage:
+			</p>
+			<span class="start">Start/Stop</span>
+			<span class="speed">Speed</span>
+			<span class="fsize">Font Size</span>
+			<img class="spaceBar" src="img/space_bar.png" alt="Space Bar">
+			<img class="arrow-left" src="img/arrow_left.png" alt="Left Arrow">
+			<img class="arrow-right" src="img/arrow_right.png" alt="Right Arrow">
+			<img class="arrow-up" src="img/arrow_up.png" alt="Up Arrow">
+			<img class="arrow-down" src="img/arrow_down.png" alt="Down Arrow">
+		</div>
+		<div id="help">
+			<a href="about.html">
+				<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+			</a>
+		</div>
+        <script src="js/prompter.js"></script>
+		<script>
+			/*$(window).on('load', function(){
+				loadFile("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum sem sapien, id pulvinar ex pretium ac. In et placerat nunc. Phasellus ultricies congue pulvinar. In sagittis placerat efficitur. Vestibulum eu nulla non enim imperdiet sodales et vitae augue. Etiam nec dolor leo. Maecenas quis velit libero. Suspendisse tempus massa nibh, et finibus velit aliquet posuere. Phasellus tempor tristique sapien, quis volutpat risus tincidunt vitae. Fusce aliquet vitae ante nec consequat. Maecenas efficitur eros neque, non vehicula quam mollis non. Aliquam fringilla ante nec mauris elementum tristique." +
+				"Fusce quis massa at ex ullamcorper luctus. Etiam eget vulputate nunc. In orci metus, consectetur ut consectetur sodales, ultrices nec sem. Maecenas a vehicula erat. Cras eros dui, dignissim eget risus sit amet, tempor molestie nibh. Praesent nec metus dolor. Mauris convallis nunc vitae sodales auctor. Ut mollis vulputate justo id sodales. Nunc nec augue id mauris mattis interdum. Proin venenatis ante nec pretium molestie. Sed non ultricies dolor, ut interdum felis. Donec tristique bibendum consectetur. Aenean aliquet consectetur leo. Pellentesque mollis justo id nisl malesuada efficitur. Integer elementum tincidunt condimentum." +
+				"Aliquam nibh est, efficitur a nulla sit amet, luctus interdum risus. Maecenas finibus massa ut lacus commodo, at vulputate nisl pretium. Ut at quam ut ex sagittis semper. Etiam et massa ultricies, lobortis magna nec, convallis ante. Pellentesque lobortis mollis magna sit amet pharetra. Integer metus ante, pharetra id elit vitae, tincidunt tempor tortor. Curabitur odio magna, pharetra a ligula eu, viverra lobortis tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas viverra viverra tellus, quis congue turpis ultricies non. Curabitur ullamcorper sapien sit amet sem tincidunt facilisis. Maecenas vitae leo at justo mattis gravida ut ut tortor. In suscipit eleifend lectus, et interdum velit facilisis vitae. Ut tincidunt venenatis felis, sed luctus mi volutpat ut. Mauris bibendum sit amet diam sed dictum." +
+				"Aliquam cursus mauris ac eros lacinia, tristique pretium arcu sagittis. Fusce eget consequat nibh. Maecenas sed facilisis ex. Donec eu ex malesuada, dapibus ipsum et, scelerisque sem. Sed vitae semper erat. Nam vulputate sapien sed dignissim pellentesque. Donec consectetur est gravida vehicula pulvinar. Integer non rhoncus ipsum, vestibulum malesuada nibh. Vestibulum sed diam interdum, cursus dui sit amet, vulputate tellus." +
+				"Sed et sem mollis odio ullamcorper vestibulum. Aenean tempor quam quis ligula semper, id placerat sem ultrices. Donec facilisis volutpat dui, nec fermentum quam vestibulum interdum. Proin quis diam sodales, vehicula nulla et, sodales ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi et lacus et purus aliquam porta. Curabitur ipsum justo, venenatis non felis non, aliquet ultricies orci." +
+				"In consequat libero in nisi condimentum, vel convallis justo blandit. Praesent id tristique lectus. Morbi nec urna hendrerit, aliquet turpis id, tristique mi. Nulla sed luctus mi, ultrices fringilla tellus. Quisque gravida aliquet tortor in molestie. Ut molestie lectus id sagittis congue. Vivamus dui nibh, ullamcorper a laoreet tristique, eleifend eget leo. In quis arcu at velit malesuada venenatis ut vel ligula. Etiam volutpat ullamcorper ornare. Quisque lobortis sed metus vel cursus. Suspendisse consectetur imperdiet elit sed ultricies. Praesent venenatis turpis ac nisl pulvinar porta. Integer tempor facilisis maximus. Integer porttitor consequat massa, sit amet mollis enim tempus ut." +
+				"Aliquam tincidunt dapibus sapien a ornare. Curabitur semper sed odio sit amet interdum. Fusce pulvinar ligula sem, et tristique sem vulputate id. Pellentesque odio ex, vehicula id ullamcorper rutrum, posuere ultricies arcu. Fusce quis nunc metus. Nunc non leo a eros laoreet maximus. Sed id dui nibh. Aenean lacinia facilisis maximus. Nam eget arcu non nibh scelerisque lobortis a at dolor. Pellentesque sollicitudin ipsum id risus porta, vel scelerisque lectus molestie. Vivamus suscipit nunc vel metus condimentum scelerisque. Nullam vestibulum, ex id ultricies aliquam, mauris nunc rhoncus ligula, non malesuada diam metus in ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi at orci et mi finibus ornare et mattis dui." +
+				"Integer ullamcorper dictum nulla, vitae varius quam commodo quis. In et nisi aliquet, tincidunt nulla id, dignissim nulla. Integer sed ultrices nisl. Nullam porta laoreet turpis, vel maximus velit pharetra eu. Sed sed iaculis mi. Nullam aliquam nibh metus, id eleifend ligula dictum sit amet. Nam vel libero vitae enim vulputate viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus at mauris a arcu pulvinar facilisis. Nam lectus leo, interdum vitae eleifend a, faucibus id magna. Donec malesuada sagittis felis non varius. Proin rutrum sed eros at consectetur. Vivamus neque nibh, tempor at tempus at, malesuada a turpis. Pellentesque in molestie diam. Proin non metus scelerisque, efficitur augue ac, convallis lectus." +
+				"Quisque sit amet hendrerit nibh. Nullam eget elementum ante. Nam faucibus lacus et sollicitudin egestas. Nam in diam dolor. Mauris justo tortor, fringilla id efficitur eget, facilisis non diam. Ut non odio cursus neque lacinia ornare. Proin leo lorem, suscipit in mi et, auctor varius diam. Suspendisse at quam lectus. Aliquam eu libero aliquet, efficitur sapien eget, sodales lacus." +
+				"Aliquam eleifend quam quis mollis semper. Maecenas tristique gravida tempus. Sed blandit tincidunt malesuada. In eros nulla, tincidunt vitae porttitor non, aliquet a ligula. Sed consequat eu massa ut elementum. Nam et nisi sit amet nulla posuere iaculis. Quisque vitae mi nisl. Vestibulum in ex lacus. Nunc eu felis quis sapien ultrices viverra a in leo. Cras hendrerit ante ac odio varius volutpat. Sed vehicula, dui in tincidunt condimentum, leo turpis vulputate nunc, nec dapibus dolor velit eu mi.")
+			});*/
+		</script>
+    </body>
+</html>

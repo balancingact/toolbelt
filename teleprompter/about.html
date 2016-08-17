@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/prompter.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        
+        <title>Teleprompter</title>
+    </head>
+    <body>
+        <div id="holder">
+            <div class="about">
+                <p class="main">Use this service to import a file to be used on
+                a teleprompter.  You will then be able to control
+                the speed of the prompter scrolling and the size
+                of the font.<br><br>
+                <span id="click">Click anywhere to begin.</span>
+                </p>
+            </div>
+        </div>
+        <script>
+            
+            $("#holder").hover(
+                function () {
+				    $("#click").css('color', '#888');
+				},function () {
+				    $("#click").css('color', '#ccc');
+				}
+            );
+            
+            $('body').on('click', function() {
+                window.location="teleprompter.html";
+            });
+        </script>
+    </body>
+</html>

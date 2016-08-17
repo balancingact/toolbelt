@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<!-- Includes -->
+		<!-- Stylesheets -->
+		<!--<link rel="stylesheet" href="css/reset.css">-->
+		<link rel="stylesheet" href="css/index.css">
+		
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="js/index.js"></script>
+		
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="./img/color.png">
+		<title>Color Picker</title>
+	</head>
+	<body>
+		<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool -->
+		<div id="container">
+			<div id="palette" class="block">
+				<div id="color-palette"></div>
+				<div id="color-info">
+					<div class="title"> CSS Color </div>
+				</div>
+			</div>
+
+			<div id="picker" class="block">
+				<div class="ui-color-picker" data-topic="picker" data-mode="HSL"></div>
+				<div id="picker-samples" sample-id="master"></div>
+				<div id="controls">
+					<p style="font-family: Arial, Helvetica, sans-serif;color: #777;margin-top: 0px;margin-bottom: 8px;">HTML5 Picker</p>
+					<input id="html5-picker" type="color" value="#C14242" style="width: 110;margin-bottom: 8px;">
+					<div id="delete">
+						<div id="trash-can"></div>
+					</div>
+					<div id="void-sample" class="icon"></div>
+					
+				</div>
+			</div>
+	
+			<div id="canvas" data-tutorial="drop">
+				<div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index" data-max="20" data-sensivity="10"></div>
+			</div>
+			
+		</div>
+		
+		<script>
+			$(document).ready(function(){
+				$("#html5-picker").change(function(){
+					c = UIColorPicker.RGBColor(hexToRgb($("#html5-picker").val()).r, hexToRgb($("#html5-picker").val()).g, hexToRgb($("#html5-picker").val()).b);
+					UIColorPicker.setColor('picker', c);
+					
+					function hexToRgb(hex) {
+						var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+						return result ? {
+							r: parseInt(result[1], 16),
+							g: parseInt(result[2], 16),
+							b: parseInt(result[3], 16)
+						} : null;
+					}					
+				})
+			});
+		</script>
+	</body>
+</html>

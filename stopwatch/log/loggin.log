@@ -1,0 +1,100 @@
+[2016-06-06 10:21:51,901] - INFO - Server started on port 23456
+[2016-06-06 10:22:49,741] - INFO - Server has been shut down.
+[2016-06-06 10:23:48,982] - INFO - Server started on port 23456
+[2016-06-06 10:24:25,182] - INFO - Server has been shut down.
+[2016-06-06 10:25:19,982] - INFO - Server started on port 23456
+[2016-06-06 10:26:35,312] - INFO - Server has been shut down.
+[2016-06-06 10:26:36,018] - INFO - Server started on port 23456
+[2016-06-06 10:27:38,056] - INFO - Server has been shut down.
+[2016-06-06 10:27:38,743] - INFO - Server started on port 23456
+[2016-06-06 10:29:07,722] - INFO - Server has been shut down.
+[2016-06-06 10:29:08,370] - INFO - Server started on port 23456
+[2016-06-06 10:32:07,172] - INFO - Server has been shut down.
+[2016-06-06 10:32:07,893] - INFO - Server started on port 23456
+[2016-06-06 10:34:49,702] - INFO - Server has been shut down.
+[2016-06-06 10:36:28,321] - INFO - Server started on port 23456
+[2016-06-06 10:36:48,639] - INFO - Server has been shut down.
+[2016-06-06 10:36:49,422] - INFO - Server started on port 23456
+[2016-06-06 10:37:04,863] - INFO - Server has been shut down.
+[2016-06-06 10:37:32,008] - INFO - Server started on port 23456
+[2016-06-06 10:38:07,648] - INFO - Server has been shut down.
+[2016-06-06 10:38:08,432] - INFO - Server started on port 23456
+[2016-06-06 10:38:35,041] - INFO - Server has been shut down.
+[2016-06-06 10:38:35,830] - INFO - Server started on port 23456
+[2016-06-06 10:44:07,709] - INFO - Server has been shut down.
+[2016-06-06 10:44:09,046] - INFO - Server started on port 23456
+[2016-06-06 10:44:11,452] - INFO - Server has been shut down.
+[2016-06-06 10:44:19,370] - INFO - Server started on port 23456
+[2016-06-06 10:44:38,757] - INFO - Server has been shut down.
+[2016-06-06 10:44:41,379] - INFO - Server started on port 23456
+[2016-06-06 10:45:09,973] - INFO - Server has been shut down.
+[2016-06-06 10:45:57,220] - INFO - Server started on port 23456
+[2016-06-06 10:46:28,774] - INFO - Server has been shut down.
+[2016-06-06 10:46:30,040] - INFO - Server started on port 23456
+[2016-06-06 10:46:41,807] - INFO - Server has been shut down.
+[2016-06-06 10:46:53,443] - INFO - Server started on port 23456
+[2016-06-06 10:54:25,516] - INFO - Server has been shut down.
+[2016-06-06 10:54:26,746] - CRITICAL - Failure: <class 'twisted.internet.error.CannotListenError'>
+[2016-06-06 10:54:26,768] - CRITICAL - !! Traceback (most recent call last):
+!!   File "scoreboard.py", line 211, in <module>
+    reactor.listenTCP(port, server.Site(HelloResource()))
+!!   File "/Library/Python/2.7/site-packages/twisted/internet/posixbase.py", line 478, in listenTCP
+    p.startListening()
+!!   File "/Library/Python/2.7/site-packages/twisted/internet/tcp.py", line 984, in startListening
+    raise CannotListenError(self.interface, self.port, le)
+!! CannotListenError: Couldn't listen on any:80: [Errno 13] Permission denied.
+
+[2016-06-06 10:54:36,256] - INFO - Server started on port 23456
+[2016-06-06 10:55:30,717] - INFO - Server has been shut down.
+[2016-06-06 10:55:31,725] - INFO - Server started on port 23456
+[2016-06-06 10:57:46,143] - INFO - Server has been shut down.
+[2016-06-06 10:57:46,959] - INFO - Server started on port 23456
+[2016-06-06 11:06:50,181] - INFO - Server has been shut down.
+[2016-06-06 11:06:52,697] - INFO - Server started on port 23456
+[2016-06-06 11:07:09,006] - INFO - Server has been shut down.
+[2016-06-06 11:07:09,877] - INFO - Server started on port 23456
+[2016-06-06 11:07:12,182] - INFO - Server has been shut down.
+[2016-06-06 11:07:14,779] - INFO - Server started on port 23456
+[2016-06-06 11:09:04,464] - INFO - Server has been shut down.
+[2016-06-06 11:11:03,880] - INFO - Server started on port 23456
+[2016-06-06 11:11:18,049] - INFO - Server has been shut down.
+[2016-06-06 11:11:32,557] - INFO - Server started on port 23456
+[2016-06-08 15:56:51,692] - INFO - Server has been shut down.
+[2016-06-08 15:57:04,638] - INFO - Server started on port 23456
+[2016-06-09 14:16:41,097] - INFO - Server has been shut down.
+[2016-06-09 14:16:49,766] - INFO - Server started on port 23456
+[2016-06-10 17:04:07,350] - INFO - Server has been shut down.
+[2016-06-13 09:07:49,025] - INFO - Server started on port 23456
+[2016-06-17 16:56:30,963] - INFO - Server has been shut down.
+[2016-06-20 08:10:07,370] - INFO - Server started on port 23456
+[2016-06-20 08:10:35,515] - INFO - Server has been shut down.
+[2016-06-20 08:10:37,518] - INFO - Server started on port 23456
+[2016-06-20 08:11:32,558] - INFO - Server has been shut down.
+[2016-06-20 08:11:55,619] - INFO - Server started on port 23456
+[2016-06-20 08:18:56,499] - INFO - Server has been shut down.
+[2016-06-20 08:19:00,713] - INFO - Server started on port 23456
+[2016-06-24 16:59:34,170] - INFO - Server has been shut down.
+[2016-06-24 16:59:38,509] - INFO - Server started on port 23456
+[2016-06-24 17:01:10,421] - INFO - Server has been shut down.
+[2016-06-27 08:16:44,445] - INFO - Server started on port 23456
+[2016-06-27 08:16:52,813] - INFO - Server has been shut down.
+[2016-06-27 08:19:27,082] - INFO - Server started on port 23456
+[2016-06-28 09:24:43,736] - INFO - Server started on port 23456
+[2016-06-29 17:08:38,468] - INFO - Server has been shut down.
+[2016-07-05 08:52:15,247] - INFO - Server started on port 23456
+[2016-07-08 17:21:59,536] - INFO - Server has been shut down.
+[2016-07-11 08:06:55,267] - INFO - Server started on port 23456
+[2016-07-18 10:29:50,125] - INFO - Server started on port 23456
+[2016-07-19 13:26:27,264] - INFO - Server has been shut down.
+[2016-07-19 13:26:45,172] - INFO - Server started on port 23456
+[2016-07-19 13:26:48,888] - INFO - Server has been shut down.
+[2016-07-19 13:27:29,865] - INFO - Server started on port 23456
+[2016-07-19 13:27:39,465] - INFO - Server has been shut down.
+[2016-07-19 13:27:53,163] - INFO - Server started on port 23456
+[2016-07-22 17:02:48,930] - INFO - Server has been shut down.
+[2016-07-29 16:26:04,425] - INFO - Server started on port 23456
+[2016-07-29 17:12:15,639] - INFO - Server has been shut down.
+[2016-08-01 08:14:50,153] - INFO - Server started on port 23456
+[2016-08-05 17:03:27,028] - INFO - Server has been shut down.
+[2016-08-08 08:28:32,298] - INFO - Server started on port 23456
+[2016-08-12 16:48:01,491] - INFO - Server has been shut down.
