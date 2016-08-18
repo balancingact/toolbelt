@@ -788,8 +788,12 @@ var UIColorPicker = (function UIColorPicker() {
 	};
 
 	ColorPicker.prototype.notify = function notify(topic, value) {
-		if (this.subscribers[topic])
+		if (this.subscribers[topic]) {
+			if (topic == 'hexa') {
+				$("#html5-picker").val(this.color.getHexa());
+			}
 			this.subscribers[topic](value);
+		}
 	};
 
 	/*************************************************************************/
@@ -848,8 +852,9 @@ var UIColorPicker = (function UIColorPicker() {
 	};
 
 	var setColor = function setColor(topic, color) {
-		if (pickers[topic])
+		if (pickers[topic]) {
 			pickers[topic].setColor(color);
+		}
 	};
 
 	var getColor = function getColor(topic) {
@@ -2159,4 +2164,3 @@ var ColorPickerTool = (function ColorPickerTool() {
 	};
 
 })();
-
